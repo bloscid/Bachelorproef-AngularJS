@@ -180,14 +180,12 @@
 % thesis) synthese van het document. In ons geval beschrijf je kort de
 % probleemstelling en de context, de onderzoeksvragen, de aanpak en de
 % resultaten.
-  \lipsum[1-4]
 \end{abstract}
 
 \chapter*{Voorwoord}
 \label{ch:voorwoord}
 
 % TODO: Vergeet ook niet te bedanken wie je geholpen/gesteund/... heeft
-\lipsum[5-6]
 
 \tableofcontents
 
@@ -199,20 +197,13 @@
 \chapter{Inleiding}
 \label{ch:inleiding}
 
-De inleiding moet de lezer alle nodige informatie verschaffen om het onderwerp te begrijpen zonder nog externe werken te moeten raadplegen \citep{Pollefliet2011}. Dit is een doorlopende tekst die gebaseerd is op al wat je over het onderwerp gelezen hebt (literatuuronderzoek).
-
-Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz. naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${cite\{\}}} of \texttt{$\backslash${citep\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\TeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin, gebruik je \texttt{$\backslash${}cite\{\}}.
-Soms wil je de auteur niet expliciet vernoemen, dan gebruik je \texttt{$\backslash${}citep\{\}}. Hieronder een voorbeeld van elk.
-
-\cite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\citep{Creeger2009}.
-
 \section{Probleemstelling en Onderzoeksvragen}
 \label{sec:onderzoeksvragen}
 
 % TODO: Wees zo concreet mogelijk bij het formuleren van je
 % onderzoeksvra(a)g(en). Een onderzoeksvraag is trouwens iets waar nog
 % niemand op dit moment een antwoord heeft (voor zover je kan nagaan).
-\lipsum[7-20]
+Angular 2 is nog maar sinds december 2015 in beta, om deze reden is er nog geen overvloed aan informatie beschikbaar. Als developer of bedrijf de opstap maken van Angular 1.x naar Angular 2.0 zal daarom dus niet vanzelfsprekend zijn. Er zijn reeds artikels die een speculatie maken over de migratie hiernaar, vooral in de weken na de aankondiging van Angular 2. Maar echte concrete of goed onderbouwde stappenplannen om een goede overgang te maken zijn er nog niet. Waarom zou een developer overstappen van Angular 1.x naar Angular 2.0, is de huidige Angular niet meer goed genoeg? Wat zijn de belangrijkste veranderingen, welke stappen zal hij/zijn moeten ondergaan om een naadloze overgang te maken en is het eigenlijk zelfs wel nuttig een overstap te maken met wat momenteel geweten is?
 
 \chapter{Methodologie}
 \label{ch:methodologie}
@@ -222,14 +213,184 @@ Soms wil je de auteur niet expliciet vernoemen, dan gebruik je \texttt{$\backsla
 % op deze manier te werk gegaan bent. Je moet kunnen aantonen dat je de best
 % mogelijke manier toegepast hebt om een antwoord te vinden op de
 % onderzoeksvraag.
-\lipsum[21-25]
 
-\chapter{Corpus}
-\label{ch:corpus}
+\chapter{Waarom overstappen?}
+\label{ch:waarom}
 
 %% TODO: de structuur en titel van deze hoofdstukken hangen af van je
 % eigen onderzoek. Elke fase in je onderzoek kan een eigen hoofdstuk krijgen. Kies telkens een gepaste titel. ``Corpus'' is *GEEN* gepaste titel
-\lipsum[26-75]
+Angular 1.x werkt zoals in de probleemstelling vermeld werd nog steeds goed en zal de eerstkomende jaren zeker niet verdwijnen. Maar Angular 2 is gemaakt om beter te zijn dan Angular 1. Angular 1 zal de komende jaren dus zeker nog gebruikt kunnen worden om applicaties te ontwikkelen, met als grote reden dat mensen nog steeds oudere technologie\"en gebruiken bijvoorbeeld: IE8, oude versies van Android, \ldots
+\newline
+\newline
+Voor ik overga naar hoe up te graden naar Angular 2 geef ik in dit hoofdstuk enkele redenen waarom Angular 2 het overwegen waard is. 
+
+\paragraph{Perfomantie} 
+Verschillende modules zullen verwijderd worden uit de Angular core, wat resulteert in beter performantie. Dit wil niet zeggen dat je deze modules niet meer kan gebruiken, je hoeft nadien enkel de modules die je nodig hebt te zoeken en gebruiken.
+\par
+
+\paragraph{Betere mobile support}
+Angular 1.x is niet gebouwd met mobile support in het achterhoofd, hoewel er wel enkele frameworks zoals Ionic hier een oplossing voor bieden. Angular 2 heeft uit deze fouten geleerd en meteen frameworks, zoals Ionic, ge\"implementeerd wat een grote inpakt heeft op de user experience en performantie ervan. 
+\par
+
+\paragraph{Toekomst} 
+Angular 2 gebruikt alle nieuwe, veelbelovende features die momenteel beschikbaar zijn, zoals ES6, Typescript, WebComponents, \ldots
+\par
+
+
+\chapter{Veranderingen in Angular 2.0}
+\label{ch:veranderingen}
+Een nieuwe versie brengt natuurlijk ook verandering met zich mee. In dit hoofdstuk bespreek ik de grootste veranderen tegenover Angular 1.x.
+
+\paragraph{Typescript}
+Typescript is een open source programmeer taal ontwikkeld door Microsoft. Microsoft werkte gedurende enkele maanden samen met het Angular team om Typescript te verbeteren. Resultaat van deze samenwerking was de nieuwe release van de taal, Typescript 1.5. Dit is bijgevolg ook de taal waarin Angular 2 gebouwd is. Hieraan zijn ook enkele voordelen verbonden.  
+
+\begin{itemize}
+    	\item Type errors worden compile-time en runtime gegeven. Op die manier is het makkelijker je code te debuggen en te checken of je applicatie werkt.
+	\item Betere auto complete door tekst editors en IDEs.
+	\item De Javascript VM kan beter code optimizations maken.
+\end{itemize}
+
+Typescript is een superset van ES6, wat op zijn beurt een superset van ES5 is. Angular 2 wordt momenteel getranspiled naar ES5 om uitvoerbaar te zijn op moderne browsers. Developers kunnen natuurlijk kiezen in welke taal ze willen werken (ES5, ES6, Typescript, \ldots).
+\par
+
+\paragraph{Component based}
+Angular 2 is volledig component based, dit wil zeggen dat zaken als controllers en directives niet meer gebruikt zullen worden. De controllers en directives zullen vervangen worden door componenten. Componenten zijn directives met een template die twee zaken bevatten, een selector en een @View. De selector correspondeert met de html tag waarmee de component wil communiceren en de @View specifieert een html template waarin de component gebruikt zal worden.
+\par
+
+\newpage
+\leavevmode
+\newline
+Een voorbeeld zal meer duidelijkheid schetsen.
+\linebreak
+\newline
+Angular 1.x:
+
+\begin{lstlisting}[frame=single]
+angular.module('voorbeeld')
+	.controller('VoorbeeldCtrl', function() {});
+\end{lstlisting}
+
+\leavevmode
+\newline Angular 2.0:
+
+\begin{lstlisting}[frame=single]
+Import  {Component, View} from 'angular/angular2';
+
+@Component({
+    selector: 'voorbeeld'
+})
+
+@View({
+    templateUrl: './components/voorbeeld/voorbeeld.html'
+})
+
+Export class Voorbeeld {}
+\end{lstlisting}
+
+\paragraph{Dependency injection} 
+Hier komen alle verandering omtrent dependency injection.
+\par
+
+\paragraph{\$scope} 
+Angular 2 zal geen \$scope meet bevatten. In plaats van properties in de scope te binden in onze templates kan je nu meteen naar properties binden van je componenten. 
+
+\begin{lstlisting}[frame=single]
+@Component({
+  selector: 'sample-app',
+  componentServices: [
+    NameList
+  ]
+})
+@Template({
+  url: './templates/sample-app.html',
+  directives: [Foreach]
+})
+class SampleApp {
+  constructor() {
+    this.names = NameList.get();
+    this.newName = '';
+  }
+  addName(newname) {
+    this.names.push(newname.value);
+    newname.value = '';
+  }
+}
+\end{lstlisting}
+?Nu kunnen we meteen binden naar ?this.names? in onze template: 
+
+\begin{lstlisting}[frame=single]
+...
+<ul>
+  <li *foreach="#name in names"></li>
+</ul>
+...
+\end{lstlisting}
+
+
+\chapter{Angular 1.5}
+\label{ch:angular1.5}
+Voor ik inga op hoe je de overstap naar Angular 2.0 kan maken wil ik het eerst hebben over Angular 1.5 en waarom het handig kan zijn eerst de overstap hiernaar te maken. Angular 1.5 is namelijk gemaakt met Angular 2 in het achterhoofd. De grootste reden achter deze release is de migratie naar Angular 2 makkelijk ter maken. In deze release zitten features die het mogelijk maken voor developers om Angular 1 applicaties te maken die dichter aanleunen bij de structuur van Angular 2.
+\linebreak
+\newline
+De grootste veranderingen zijn vooral gebaseerd rond componenten omdat dit ook een belangrijke verandering is in Angular 2. Maar Angular 1.5 houdt ook enkele andere features in om development te verbeteren, zoals betere support voor ES6 klassen, ngResource, ngRoute, \ldots
+
+\paragraph{Component based applicaties}
+\subparagraph{Component directives defini\"eren}
+\leavevmode
+\newline
+Het is nu mogelijk makkelijk een component te defini\"eren met behulp van de module.component helper methode. Een component moet nu enkel een template, enkele bindings en een controller hebben. Voor de overige directive opties zijn er defaults geset. 
+
+\begin{lstlisting}[frame=single]
+myModule.component('myComponent', {
+  template: '<h1>Hello {{ $ctrl.getFullName() }}</h1>',
+  bindings: { firstName: '<', lastName: '<' },
+  controller: function() {
+    this.getFullName = function() {
+      return this.firstName + ' ' + this.lastName;
+    };
+  }
+});
+
+<my-component first-name="'Alan'" last-name="'Rickman'">
+</my-component>
+\end{lstlisting}
+
+
+\subparagraph{Lifecycle hooks}
+\leavevmode
+\newline
+Als je component controller een \$onInit() methode heeft zal de compiler deze oproepen wanneer de component ge\"initialiseerd is. Dit zorgt voor een duidelijke plaats om de initialisatie code voor je componenten te plaatsen. Dit is ook gelijkaardig aan de ngOnInit() lifecycle hook van Angular 2.
+
+\paragraph{Binding to required directives}
+\leavevmode
+\newline
+Er kan nu een object gespecificeerd worden voor de require property van directives/componenten. Wanneer gebruikt wordt met bindToController zal de compiler deze required directive controller binden aan je controller. Deze bindings zullen al gebeurd zijn wanneer de \$onInit hook wordt opgeroepen.
+
+\paragraph{Default transclusion content}
+\leavevmode
+\newline
+ngTransclude zal niet langer content overschrijven wanneer er geen content is om op te vullen. Nu kan je bijvoorbeeld default content voorzien wanneer de gebruiker van je directive geen content heeft voorzien om in te voegen.
+
+\paragraph{Multi-slot transclusion}
+\paragraph{One-way binding}
+\paragraph{ngResource}
+\paragraph{ngRoute}
+
+\chapter{Overstappen naar Angular 2.0}
+\label{ch:conclusie}
+De overstap maken naar Angular 2 in je project kan je op twee manieren aanpakken. De manier die je kiest hangt natuurlijk af van de vereisten van je project. 
+\linebreak
+\newline
+[Misschien ook handig eerst uit te leggen hoe je een Angular 2 app maakt, zonder overgang van Angular 1? https://angular.io/docs/ts/latest/quickstart.html ]
+
+\paragraph{ngForward}
+Wanneer je nog niet zeker weet of nog twijfels heb of je je project wilt upgraden naar Angular 2 kan je het framework ngForward gebruiken. Hiermee kan je Angular 1 applicaties maken die de look en feel van Angular 2 hebben. Op die manier kan je toch profiteren van de voordelen van Angular 2 terwijl je in je comfort zone blijft.
+
+\paragraph{ngUpgrade}
+Wanneer je meer wilt dan enkel de look van Angular 2 en je klaar bent de overstap te maken naar Angular 2 is het tijd je applicatie te upgraden. Hiervoor kan je ook ngForward gebruiken maar het probleem hierbij is wanneer je een groot Angular 1.x project heb, je ook alles zal moeten herschrijven om te voldoen aan de Angular 2 vereisten. Dit is zeker geen ideale oplossing en daarom is ngUpgrade gebundeld met Angular 2. 
+
+
+
 
 \chapter{Conclusie}
 \label{ch:conclusie}
@@ -238,7 +399,6 @@ Soms wil je de auteur niet expliciet vernoemen, dan gebruik je \texttt{$\backsla
 % onderzoeksvra(a)g(en). Reflecteer kritisch over het resultaat. Zijn er
 % zaken die nog niet duidelijk zijn? Heeft het ondezoek geleid tot nieuwe
 % vragen die uitnodigen tot verder onderzoek?
-\lipsum[76-80]
 
 
 \bibliographystyle{apa}
