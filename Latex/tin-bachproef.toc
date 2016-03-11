@@ -2,26 +2,29 @@
 \contentsline {chapter}{\numberline {1}Inleiding}{4}{chapter.1}
 \contentsline {section}{\numberline {1.1}Probleemstelling en Onderzoeksvragen}{4}{section.1.1}
 \contentsline {chapter}{\numberline {2}Methodologie}{5}{chapter.2}
+\contentsline {paragraph}{Literatuurstudie}{5}{section*.3}
+\contentsline {paragraph}{Vergelijking}{5}{section*.4}
+\contentsline {paragraph}{Migratieplan}{5}{section*.5}
 \contentsline {chapter}{\numberline {3}Waarom overstappen?}{6}{chapter.3}
-\contentsline {paragraph}{Perfomantie}{6}{section*.3}
-\contentsline {paragraph}{Betere mobile support}{6}{section*.4}
-\contentsline {paragraph}{Toekomst}{6}{section*.5}
+\contentsline {paragraph}{Perfomantie}{6}{section*.6}
+\contentsline {paragraph}{Betere mobile support}{6}{section*.7}
+\contentsline {paragraph}{Toekomst}{6}{section*.8}
 \contentsline {chapter}{\numberline {4}Veranderingen in Angular 2.0}{7}{chapter.4}
-\contentsline {paragraph}{Typescript}{7}{section*.6}
-\contentsline {paragraph}{Component based}{7}{section*.7}
-\contentsline {paragraph}{Dependency injection}{8}{section*.8}
-\contentsline {paragraph}{\$scope}{8}{section*.9}
+\contentsline {paragraph}{Typescript}{7}{section*.9}
+\contentsline {paragraph}{Component based}{7}{section*.10}
+\contentsline {paragraph}{Dependency injection}{8}{section*.11}
+\contentsline {paragraph}{\$scope}{8}{section*.12}
 \contentsline {chapter}{\numberline {5}Angular 1.5}{10}{chapter.5}
-\contentsline {paragraph}{Component based applicaties}{10}{section*.10}
-\contentsline {subparagraph}{Component directives defini\"eren}{10}{section*.11}
-\contentsline {subparagraph}{Lifecycle hooks}{11}{section*.12}
-\contentsline {paragraph}{Binding to required directives}{11}{section*.13}
-\contentsline {paragraph}{Default transclusion content}{11}{section*.14}
-\contentsline {paragraph}{Multi-slot transclusion}{11}{section*.15}
-\contentsline {paragraph}{One-way binding}{11}{section*.16}
-\contentsline {paragraph}{ngResource}{11}{section*.17}
-\contentsline {paragraph}{ngRoute}{11}{section*.18}
+\contentsline {paragraph}{Component based applicaties}{10}{section*.13}
+\contentsline {subparagraph}{Component directives defini\"eren}{10}{section*.14}
+\contentsline {subparagraph}{Lifecycle hooks}{11}{section*.15}
+\contentsline {paragraph}{Binding to required directives}{11}{section*.16}
+\contentsline {paragraph}{Default transclusion content}{11}{section*.17}
+\contentsline {paragraph}{Multi-slot transclusion}{11}{section*.18}
+\contentsline {paragraph}{One-way binding}{11}{section*.19}
+\contentsline {paragraph}{ngResource}{11}{section*.20}
+\contentsline {paragraph}{ngRoute}{11}{section*.21}
 \contentsline {chapter}{\numberline {6}Overstappen naar Angular 2.0}{12}{chapter.6}
-\contentsline {paragraph}{ngForward}{12}{section*.19}
-\contentsline {paragraph}{ngUpgrade}{12}{section*.20}
+\contentsline {paragraph}{ngForward}{12}{section*.22}
+\contentsline {paragraph}{ngUpgrade}{12}{section*.23}
 \contentsline {chapter}{\numberline {7}Conclusie}{13}{chapter.7}
